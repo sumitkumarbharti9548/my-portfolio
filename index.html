@@ -3,78 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sumit Kumar</title>
+    <title>Sumit Kumar - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #2f2f2f; /* Dark background */
+            background-color: #2f2f2f;
             color: white;
+            text-align: center;
         }
-        .navbar {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 15px;
-         
-           
-        }
-        .navbar a {
-            text-decoration: none;
-            color: orange; /* Default color */
-            margin: 0 15px;
-            font-size: 30px;
-            font-weight: bold;
-        }
-        .navbar a:hover {
-            color: blue; /* Hover color */
-        }
+        
+        
         .containerr {
             text-align: center;
-            margin-top: 200px;
+            margin-top: 100px;
+            padding: 20px;
         }
+        
         .containerr h1 {
             font-size: 80px;
             font-weight: bold;
             font-style: italic;
             margin-bottom: 20px;
+            background: linear-gradient(90deg, #ff8c00, #ff0080);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
+        
         .containerr p {
             font-size: 40px;
             font-weight: bold;
             font-style: oblique;
         }
-
-
-
+        
         .container {
             opacity: 0;
             transform: translateY(50px);
             animation: fadeInUp 1.5s ease-out forwards;
         }
-        h2{
-           
+        
+        h2 {
             background: linear-gradient(90deg, #5c5b8c, #4c298e);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        h1 {
-            font-size: 3rem;
-            font-weight: 600;
-            background: linear-gradient(90deg, #ff8c00, #ff0080);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        s{
-            font-size: 3rem;
-            font-weight: 600;
-            background: linear-gradient(90deg, #efedec, #ff0080);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        } 
         
-   
-
+        /* Main Buttons Container */
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+        
+        /* Main Button Styles */
+        .main-btn {
+            display: inline-flex;
+            align-items: center;
+            padding: 18px 36px;
+            background-color: #9b59b6;
+            color: white;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            font-size: 20px;
+            font-weight: bold;
+            min-width: 200px;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .main-btn i {
+            margin-right: 15px;
+            font-size: 24px;
+            transition: all 0.3s ease;
+        }
+        
+        .main-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+        
+        .main-btn:hover i {
+            transform: scale(1.2);
+        }
+        
+        /* Individual Button Colors */
+        .about-btn {
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+        }
+        
+        .social-btn {
+            background: linear-gradient(135deg, #f54ea2, #ff7676);
+        }
+        
+        .projects-btn {
+            background: linear-gradient(135deg, #17ead9, #6078ea);
+        }
+        
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -85,22 +114,51 @@
                 transform: translateY(0);
             }
         }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .containerr h1 {
+                font-size: 50px;
+            }
+            
+            .containerr p {
+                font-size: 30px;
+            }
+            
+            .buttons-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+            
+            .main-btn {
+                padding: 15px 30px;
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 <body>
+  
     
     <div class="containerr">
         <h1>Welcome to My Portfolio ✨</h1>
-         <h1>SUMIT KUMAR</h1>
-            </div> 
-    <div class="navbar">
-       <h2> <a href="about.html">ABOUT ME</a>
-        <s><span>||</span></s>
-     <a href="social.html">MY SOCIAL MEDIA</a></h2>
-     <s><span>||</span></s>
-     <h2> <a href="projects.html">WHAT I DO</a></h2>
+        <h1>SUMIT KUMAR</h1>
+        <p>Web Developer & Designer</p>
+        
+        <div class="buttons-container">
+            <a href="about.html" class="main-btn about-btn">
+                <i class="fas fa-user"></i> About Me
+            </a>
+            
+            <a href="social.html" class="main-btn social-btn">
+                <i class="fas fa-share-alt"></i> Social Media
+            </a>
+            
+            <a href="projects.html" class="main-btn projects-btn">
+                <i class="fas fa-code"></i> My Projects
+            </a>
+        </div>
     </div>
-  
-    </div> 
 </body>
 </html>
