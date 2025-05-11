@@ -3,63 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Me</title>
+    <title>Social Media Buttons</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* General Styles */
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #57485f, #6a3c75);
-            color: white;
-            text-align: center;
-            overflow-x: hidden;
-        }
-
-        /* Section Styling */
-        .contact-section {
-            padding: 50px 20px;
-            position: relative;
-            z-index: 1;
-        }
-
-        .contact-section h1 {
-            font-size: 42px;
-            margin-bottom: 30px;
-            color: #eee7e8;
-            text-transform: uppercase;
-            text-decoration: underline;
-            animation: fadeInDown 1s ease-in-out;
-        }
-
-        .contact-icons {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #5d3333;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            position: relative;
-            z-index: 1;
+            min-height: 100vh;
+            flex-direction: column;
+            padding: 20px;
         }
-
-        .contact-icons a {
+        
+        h1 {
+            color: #f0d4d4;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .social-buttons {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            width: 100%;
+            max-width: 800px;
+        }
+        
+        .social-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 20px;
+            border-radius: 8px;
+            color: white;
             text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
         }
-
-        .contact-icons img {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            border: 3px solid white;
-            transition: transform 0.3s, box-shadow 0.3s;
-            animation: bounceIn 1s ease-in-out;
+        
+        .social-btn i {
+            font-size: 20px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
         }
-
-        .contact-icons img:hover {
+        
+        .social-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .social-btn:hover i {
             transform: scale(1.2);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* WhatsApp */
+        .whatsapp {
+            background: linear-gradient(135deg, #25D366, #128C7E);
+        }
+        
+        /* Instagram */
+        .instagram {
+            background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+            background-size: 400% 400%;
+            animation: gradient 5s ease infinite;
+        }
+        
+        /* Snapchat */
+        .snapchat {
+            background-color: #FFFC00;
+            color: #000;
+        }
+        
+        /* Gmail */
+        .gmail {
+            background: linear-gradient(135deg, #D44638, #EA4335);
+        }
+        
+        /* GitHub */
+        .github {
+            background-color: #333;
+            color: white;
+        }
+        
+        /* Facebook */
+        .facebook {
+            background: linear-gradient(135deg, #1877F2, #0A5AC2);
+        }
+        
+        /* LinkedIn */
+        .linkedin {
+            background: linear-gradient(135deg, #0077B5, #00A0DC);
+        }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .social-buttons {
+                grid-template-columns: 1fr;
+            }
         }
 
-        /* Background Animation */
+
+
+         /* Background Animation */
         .background-animation {
             position: absolute;
             top: 0;
@@ -134,63 +190,75 @@
                 transform: translateY(-15px);
             }
         }
-
-        /* Responsive Styling */
-        @media (max-width: 768px) {
-            .contact-icons img {
-                width: 60px;
-                height: 60px;
-            }
-
-            .contact-section h1 {
-                font-size: 32px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .contact-icons img {
-                width: 50px;
-                height: 50px;
-            }
-
-            .contact-section h1 {
-                font-size: 24px;
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="background-animation">
+    <h1>Connect With Me</h1>
+        <div class="background-animation">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
+         <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+    <div class="social-buttons">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/9548219893" class="social-btn whatsapp">
+            <i class="fab fa-whatsapp"></i>
+            WhatsApp
+        </a>
+        
+        <!-- Instagram -->
+        <a href="https://www.instagram.com/_unique_boy_sumit/profilecard/?igsh=MTUwNXl6dmIyOGIydA==" class="social-btn instagram">
+            <i class="fab fa-instagram"></i>
+            Instagram
+        </a>
+        
+        <!-- Snapchat -->
+        <a href="https://www.snapchat.com/add/unique_sumit954" class="social-btn snapchat">
+            <i class="fab fa-snapchat-ghost"></i>
+            Snapchat
+        </a>
+        
+        <!-- Gmail -->
+        <a href="mailto:sumitkumar954821@gmail.com" class="social-btn gmail">
+            <i class="fas fa-envelope"></i>
+            Gmail
+        </a>
+        
+        <!-- GitHub -->
+        <a href="https://github.com/sumitkumarbharti9548" class="social-btn github">
+            <i class="fab fa-github"></i>
+            GitHub
+        </a>
+        
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/sumit.kumar.16869/" class="social-btn facebook">
+            <i class="fab fa-facebook-f"></i>
+            Facebook
+        </a>
+        
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/sumit-kumar-462a7b308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="social-btn linkedin">
+            <i class="fab fa-linkedin-in"></i>
+            LinkedIn
+        </a>
     </div>
 
-    <div class="contact-section">
-        <h1>Contact Me</h1>
-        <div class="contact-icons">
-            <a href="https://www.facebook.com/profile.php?id=100059424765519" target="_blank" title="Facebook">
-                <img src="https://image.similarpng.com/file/similarpng/very-thumbnail/2020/04/Beautiful-design-Facebook-logo-social-media-png.png" alt="Facebook">
-            </a>
-            <a href="https://www.instagram.com/_unique_boy_sumit/profilecard/?igsh=MTUwNXl6dmIyOGIydA==" target="_blank" title="Instagram">
-                <img src="https://images.unsplash.com/photo-1689852501130-e89d9e54aa41?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5zdGFncmFtJTIwbG9nb3xlbnwwfHwwfHx8MA%3D%3D" alt="Instagram">
-            </a>
-            <a href="https://www.snapchat.com/add/unique_sumit954" target="_blank" title="Snapchat">
-                <img src="https://static.vecteezy.com/system/resources/previews/018/930/694/non_2x/snapchat-logo-snapchat-icon-transparent-free-png.png" alt="Snapchat">
-            </a>
-            <a href="mailto:sumitkumar954821@gmail.com" target="_blank" title="Email">
-                <img src="https://cdn4.iconfinder.com/data/icons/social-media-logos-6/512/112-gmail_email_mail-512.png" alt="Email">
-            </a>
-            <a href="https://www.linkedin.com/in/sumit-kumar-462a7b308?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" title="LinkedIn">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyH2-tXIthPJ-JOdzjgN7fDN9OWvQ9oVNV0A&s" alt="LinkedIn">
-            </a>
-            <a href="https://github.com/sumitkumarbharti9548" target="_blank" title="GitHub">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT69u17-Vd9k9sVrx4eXMbFkGTzN8obUDp0lQ&s" alt="GitHub">
-                <a href="https://wa.me/9548219893" target="_blank" title="whatsApp">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/768px-WhatsApp.svg.png?20220228223904" alt="whatsApp">
-            </a>
-        </div>
-    </div>
+    <script>
+        // Optional: Add click animation
+        document.querySelectorAll('.social-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'translateY(-5px)';
+                }, 200);
+            });
+        });
+    </script>
 </body>
 </html>
